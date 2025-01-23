@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,7 +41,7 @@
             color: white;
         }
 
-        /* Estilos del reloj */
+        /* Clock Styles */
         .clock-container {
             position: fixed;
             top: 20px;
@@ -91,7 +92,7 @@
             font-size: 14px;
         }
 
-        /* Contenedor de las imágenes y la descripción */
+        /* Image and description container */
         .image-container {
             display: flex;
             align-items: center;
@@ -112,13 +113,13 @@
         .image-container:hover img {
             cursor: pointer;
         }
-        /* Estilo del texto "dar click" */
+        /* "Click" text style */
         .click-indicator {
             font-size: 12px;
             color: #670804;
             margin-top: 5px;
         }
-        /* Estilos del pie de página */
+        /* Footer Styles */
         footer {
             background-color: #254E70;
             color: white;
@@ -126,7 +127,7 @@
             padding: 10px 0;
             width: 100%;
         }
-        /* Estilos del reproductor de Spotify */
+        /* Spotify player styles */
         .spotify-player {
             margin-top: 20px;
             padding: 20px;
@@ -139,16 +140,16 @@
 <body>
     <div class="container">
         <header>
-            <h1>⌦ .｡.:*♡MI BLOG✧ ೃ༄*ੈ✩</h1>
+            <h1>⌦ .｡.:*♡MY BLOG✧ ೃ༄*ੈ✩</h1>
         </header>
         
         <nav>
-            <a href="Inicio.html">Inicio</a>
+            <a href="Inicio.html">Home</a>
             <a href="Videos.html">Videos</a>
-            <a href="AcercaDe.html">Acerca de</a>
+            <a href="AcercaDe.html">About</a>
         </nav>
 
-        <!-- Reloj -->
+        <!-- Clock -->
         <div class="clock-container">
             <div class="clock">
                 <div class="hand hour-hand"></div>
@@ -159,70 +160,60 @@
         </div>
 
         <main>
-            <!-- Sección de imágenes con descripción -->
+            <!-- Image section with description -->
             <section>
                 <br>
-                <p>Mi nombre es Tony Mellado, tengo 20 años, estudio ISW en ITSON. </p>
-                <p>Esta página la hice en base a mis gustos y preferencias...</p>
+                <p>My name is Tony Mellado, I'm 20 years old, and I study ISW at ITSON.</p>
+                <p>I created this page based on my likes and preferences...</p>
                 <br>
-                <h2>Mi top viejas que más amo son..</h2>
-                <p>Tengo mi top de mis viejas, claro que son muchas pero solo pongo las que más me gustan.</p>
+                <h2>My top Viejas I love the most are..</h2>
+                <p>I have a list of my Viejas, of course, there are many, but I'm just listing the ones I like the most.</p>
                 <div class="image-container">
                     <img src="https://i.pinimg.com/originals/f1/0a/ed/f10aed1746a3a74196a92b7ee56e8d1e.jpg" alt="Konig" onclick="showDescription(this)">
                     <div>
-                        <div class="click-indicator">Dar click</div>
-                        <div class="description">Konig: Es un operador del videojuego Warzone, es Austriaco,
-                             habla aleman. Mide mendigos mas de 2 metros de alto, me encantan altotes pa que me peguen.</div>
+                        <div class="click-indicator">Click</div>
+                        <div class="description">Konig: He is an operator from the game Warzone, he's Austrian, speaks German. he’s over 2 meters tall, I love tall mens to slap me.</div>
                     </div>
                 </div>
 
                 <div class="image-container">
                     <img src="https://i.pinimg.com/736x/8a/e2/08/8ae208afa0762c9ab768f0e5d078a19d.jpg" alt="Simon Ghost" onclick="showDescription(this)">
                     <div>
-                        <div class="click-indicator">Dar click</div>
-                        <div class="description">Simon Ghost Riley: Personaje iconico, viejo amargado de pasado feo,
-                            su primer beso fue con una serpiente y no con la vibora de mí lastimosamente.
-                        Ya esta muerto, pero le siguen sacando provecho a este viejo pocho, me encanta bastante, 
-                        una de mis primeras viejas preferidas pero la deje en top 2 por que el Austriaco le gano. </div>
+                        <div class="click-indicator">Click</div>
+                        <div class="description">Simon Ghost Riley: Iconic character, an old grumpy man with a rough past. His first kiss was with a snake, not the snake in me, unfortunately. He’s dead, but they keep making money off this old guy, I love him, though. He was one of my first favorites, but I dropped him to second place because the Austrian beat him.</div>
                     </div>
                 </div>
 
                 <div class="image-container">
                     <img src="https://i.pinimg.com/736x/9a/93/35/9a9335f748faaa02a1fc7c81cd5b07df.jpg" alt="Caesar" onclick="showDescription(this)">
                     <div>
-                        <div class="click-indicator">Dar click</div>
-                        <div class="description">Caesar Alexandrovich Sergueyev: Aparece en el manhwa de Rosas & Champagne,
-                             es un ruso de 2 metros, jefe de una de las mafias más poderosas de Rusia.
-                            Esta bien loco de la azotea, le disparo a su ser amado nomas pq no queria que lo abandonara. 
-                            Ojala que me disparen asi qrollo. 
-                        </div>
+                        <div class="click-indicator">Click</div>
+                        <div class="description">Caesar Alexandrovich Sergueyev: Appears in the manhwa Rosas & Champagne, he's a 2-meter-tall Russian, boss of one of the most powerful mafias in Russia. He’s crazy, shot his loved one just because he didn’t want to leave him. I wish I could get shot like that, lol.</div>
                     </div>
                 </div>
 
                 <div class="image-container">
                     <img src="https://i.pinimg.com/736x/f7/f8/fe/f7f8febefc3e92dbc9a4910b423902e2.jpg" alt="Billie Eilish" onclick="showDescription(this)">
                     <div>
-                        <div class="click-indicator">Dar click</div>
-                        <div class="description">Billie Eilish: Mi vieja desde el 2017, cada Album suyo me representa,
-                             pero esta foto suya de su album "Happier Than Ever" fue el más personal para mí
-                            en ese si llore qrollo.</div>
+                        <div class="click-indicator">Click</div>
+                        <div class="description">Billie Eilish: My girl since 2017, every album of hers represents me, but this photo from her album "Happier Than Ever" was the most personal for me, I cried in that one, lol.</div>
                     </div>
                 </div>
             </section>
             <br>
-            <!-- Reproductor de Spotify -->
+            <!-- Spotify player -->
             <section class="spotify-player">
-                <h2>Música de inspiración para la carrera de Software:</h2>
+                <h2>Inspiration music for a Software career:</h2>
                 <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0paYNCmfZldbIlGeC7K5kd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
             </section>
         </main>
     </div>
     <footer>
-        <p>&copy; 2025 Moviles. Todos los derechos reservados. Tony Mellado</p>
+        <p>&copy; 2025 Moviles. All rights reserved. Tony Mellado</p>
     </footer>
 
     <script>
-        // Función para actualizar el reloj
+        // Function to update the clock
         function updateClock() {
             const now = new Date();
             const hours = now.getHours();
@@ -242,20 +233,18 @@
             minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
             secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
 
-            digitalTime.textContent = now.toLocaleTimeString();
+            digitalTime.textContent = now
+
+.toLocaleTimeString();
         }
 
         setInterval(updateClock, 1000);
         updateClock();
 
-        // Función para mostrar u ocultar la descripción
+        // Function to show image description
         function showDescription(img) {
-            const description = img.nextElementSibling.querySelector('.description');
-            if (description.style.display === 'none' || description.style.display === '') {
-                description.style.display = 'block';  // Mostrar la descripción
-            } else {
-                description.style.display = 'none';  // Ocultar la descripción si ya estaba visible
-            }
+            const description = img.parentNode.querySelector('.description');
+            description.style.display = description.style.display === 'block' ? 'none' : 'block';
         }
     </script>
 </body>
