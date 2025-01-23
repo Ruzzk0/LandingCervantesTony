@@ -3,8 +3,137 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> landing page_CervantesTony</title>
-    
+    <title>landing page_CervantesTony</title>
+    <style>
+        body {
+            background-color: #670804;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: white;
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+        }
+        h1 {
+            color: #254E70;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #670804;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #254E70;
+            color: white;
+        }
+
+        /* Estilos del reloj */
+        .clock-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #254E70;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .clock {
+            width: 120px;
+            height: 120px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            background-color: white;
+        }
+        .hour-hand {
+            width: 4px;
+            height: 30px;
+            transform: translateX(-50%);
+        }
+        .minute-hand {
+            width: 2px;
+            height: 40px;
+            transform: translateX(-50%);
+        }
+        .second-hand {
+            width: 1px;
+            height: 45px;
+            background-color: #ff6b6b;
+            transform: translateX(-50%);
+        }
+        .digital-time {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+
+        /* Contenedor de las imágenes y la descripción */
+        .image-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        img {
+            max-width: 100px;
+            height: auto;
+            margin-right: 20px;
+            border: 5px solid transparent;
+            border-image: linear-gradient(45deg, #55CDFC, #F7A8B8, #FFFFFF, #F7A8B8, #55CDFC);
+            border-image-slice: 1;
+        }
+        .description {
+            display: none;
+            flex-grow: 1;
+        }
+        .image-container:hover img {
+            cursor: pointer;
+        }
+        /* Estilo del texto "dar click" */
+        .click-indicator {
+            font-size: 12px;
+            color: #670804;
+            margin-top: 5px;
+        }
+        /* Estilos del pie de página */
+        footer {
+            background-color: #254E70;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+        }
+        /* Estilos del reproductor de Spotify */
+        .spotify-player {
+            margin-top: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
     </style>
 </head>
 <body>
@@ -19,7 +148,15 @@
             <a href="AcercaDe.html">Acerca de</a>
         </nav>
 
-
+        <!-- Reloj -->
+        <div class="clock-container">
+            <div class="clock">
+                <div class="hand hour-hand"></div>
+                <div class="hand minute-hand"></div>
+                <div class="hand second-hand"></div>
+            </div>
+            <div class="digital-time"></div>
+        </div>
 
         <main>
             <!-- Sección de imágenes con descripción -->
@@ -30,38 +167,96 @@
                 <br>
                 <h2>Mi top viejas que más amo son..</h2>
                 <p>Tengo mi top de mis viejas, claro que son muchas pero solo pongo las que más me gustan.</p>
-                
-                    <img src="https://i.pinimg.com/originals/f1/0a/ed/f10aed1746a3a74196a92b7ee56e8d1e.jpg" alt="Konig">
-               
-                        <p>Konig: Es un operador del videojuego Warzone, es Austriaco, habla aleman. Mide mendigos mas de 2 metros de alto, me encantan altotes pa que me peguen.</p>
-               
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/originals/f1/0a/ed/f10aed1746a3a74196a92b7ee56e8d1e.jpg" alt="Konig" onclick="showDescription(this)">
+                    <div>
+                        <div class="click-indicator">Dar click</div>
+                        <div class="description">Konig: Es un operador del videojuego Warzone, es Austriaco,
+                             habla aleman. Mide mendigos mas de 2 metros de alto, me encantan altotes pa que me peguen.</div>
+                    </div>
+                </div>
 
-                
-                    <img src="https://i.pinimg.com/736x/8a/e2/08/8ae208afa0762c9ab768f0e5d078a19d.jpg" alt="Simon Ghost">
-                 
-                        <p>Simon Ghost Riley: Personaje iconico, viejo amargado de pasado feo, su primer beso fue con una serpiente y no con la vibora de mí lastimosamente.
-                        Ya esta muerto, pero le siguen sacando provecho a este viejo pocho, me encanta bastante, una de mis primeras viejas preferidas pero la deje en top 2 por que el Austriaco le gano. </p>
-                
-                    <img src="https://i.pinimg.com/736x/9a/93/35/9a9335f748faaa02a1fc7c81cd5b07df.jpg" alt="Caesar">
-                   
-                        <p>Caesar Alexandrovich Sergueyev: Aparece en el manhwa de Rosas & Champagne, es un ruso de 2 metros, jefe de una de las mafias más poderosas de Rusia.
-                            Esta bien loco de la azotea, le disparo a su ser amado nomas pq no queria que lo abandonara. Ojala que me disparen asi qrollo. 
-                        </p>
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/736x/8a/e2/08/8ae208afa0762c9ab768f0e5d078a19d.jpg" alt="Simon Ghost" onclick="showDescription(this)">
+                    <div>
+                        <div class="click-indicator">Dar click</div>
+                        <div class="description">Simon Ghost Riley: Personaje iconico, viejo amargado de pasado feo,
+                            su primer beso fue con una serpiente y no con la vibora de mí lastimosamente.
+                        Ya esta muerto, pero le siguen sacando provecho a este viejo pocho, me encanta bastante, 
+                        una de mis primeras viejas preferidas pero la deje en top 2 por que el Austriaco le gano. </div>
+                    </div>
+                </div>
 
-                    <img src="https://i.pinimg.com/736x/f7/f8/fe/f7f8febefc3e92dbc9a4910b423902e2.jpg" alt="Billie Eilish">
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/736x/9a/93/35/9a9335f748faaa02a1fc7c81cd5b07df.jpg" alt="Caesar" onclick="showDescription(this)">
+                    <div>
+                        <div class="click-indicator">Dar click</div>
+                        <div class="description">Caesar Alexandrovich Sergueyev: Aparece en el manhwa de Rosas & Champagne,
+                             es un ruso de 2 metros, jefe de una de las mafias más poderosas de Rusia.
+                            Esta bien loco de la azotea, le disparo a su ser amado nomas pq no queria que lo abandonara. 
+                            Ojala que me disparen asi qrollo. 
+                        </div>
+                    </div>
+                </div>
 
-                        <p>Billie Eilish: Mi vieja desde el 2017, cada Album suyo me representa, pero esta foto suya de su album "Happier Than Ever" fue el más personal para mí
-                            en ese si llore qrollo.</p>
+                <div class="image-container">
+                    <img src="https://i.pinimg.com/736x/f7/f8/fe/f7f8febefc3e92dbc9a4910b423902e2.jpg" alt="Billie Eilish" onclick="showDescription(this)">
+                    <div>
+                        <div class="click-indicator">Dar click</div>
+                        <div class="description">Billie Eilish: Mi vieja desde el 2017, cada Album suyo me representa,
+                             pero esta foto suya de su album "Happier Than Ever" fue el más personal para mí
+                            en ese si llore qrollo.</div>
+                    </div>
+                </div>
+            </section>
             <br>
             <!-- Reproductor de Spotify -->
-
+            <section class="spotify-player">
                 <h2>Música de inspiración para la carrera de Software:</h2>
-                            <p>Disponible en la segunda version</p>
+                <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/0paYNCmfZldbIlGeC7K5kd?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>    
+            </section>
         </main>
     </div>
     <footer>
         <p>&copy; 2025 Moviles. Todos los derechos reservados. Tony Mellado</p>
     </footer>
 
+    <script>
+        // Función para actualizar el reloj
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const hourHand = document.querySelector('.hour-hand');
+            const minuteHand = document.querySelector('.minute-hand');
+            const secondHand = document.querySelector('.second-hand');
+            const digitalTime = document.querySelector('.digital-time');
+
+            const hourDegrees = (hours % 12 + minutes / 60) * 30;
+            const minuteDegrees = (minutes + seconds / 60) * 6;
+            const secondDegrees = seconds * 6;
+
+            hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
+            minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
+            secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
+
+            digitalTime.textContent = now.toLocaleTimeString();
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        // Función para mostrar u ocultar la descripción
+        function showDescription(img) {
+            const description = img.nextElementSibling.querySelector('.description');
+            if (description.style.display === 'none' || description.style.display === '') {
+                description.style.display = 'block';  // Mostrar la descripción
+            } else {
+                description.style.display = 'none';  // Ocultar la descripción si ya estaba visible
+            }
+        }
+    </script>
 </body>
 </html>

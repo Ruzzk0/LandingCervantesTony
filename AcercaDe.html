@@ -4,17 +4,316 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Acerca De</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        body {
+            background-color: #670804;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            background-color: white;
+            width: 800px;
+            margin: 20px auto;
+            padding: 20px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        header {
+            text-align: center;
+        }
+        h1 {
+            color: #254E70;
+        }
+        nav {
+            text-align: center;
+            margin: 20px 0;
+        }
+        nav a {
+            color: #670804;
+            text-decoration: none;
+            padding: 10px 20px;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        nav a:hover {
+            background-color: #254E70;
+            color: white;
+        }
+        .social-links {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+            padding: 0;
+        }
+        .social-links li {
+            margin: 0 10px;
+        }
+        .social-links li a {
+            display: block;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            border: 3px solid #670804;
+            color: #670804;
+            font-size: 24px;
+            text-align: center;
+            line-height: 54px;
+            transition: 0.3s;
+        }
+        .social-links li:hover a {
+            background-color: #670804;
+            color: white;
+        }
+        .social-links li:nth-child(1):hover a {
+            background-color: #333; /* GitHub */
+        }
+        .social-links li:nth-child(2):hover a {
+            background-color: #dd2a7b; /* Instagram */
+        }
+        .clock-container {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: #254E70;
+            color: white;
+            padding: 10px;
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+        .clock {
+            width: 120px;
+            height: 120px;
+            border: 2px solid white;
+            border-radius: 50%;
+            position: relative;
+        }
+        .hand {
+            position: absolute;
+            bottom: 50%;
+            left: 50%;
+            transform-origin: bottom;
+            background-color: white;
+        }
+        .hour-hand {
+            width: 4px;
+            height: 30px;
+            transform: translateX(-50%);
+        }
+        .minute-hand {
+            width: 2px;
+            height: 40px;
+            transform: translateX(-50%);
+        }
+        .second-hand {
+            width: 1px;
+            height: 45px;
+            background-color: #ff6b6b;
+            transform: translateX(-50%);
+        }
+        .digital-time {
+            margin-top: 10px;
+            font-size: 14px;
+        }
+        footer {
+            background-color: #254E70;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            width: 100%;
+            position: fixed;
+            bottom: 0;
+        }
+        .form-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+        #nameInput {
+            padding: 10px;
+            font-size: 16px;
+            border: 2px solid #670804;
+            border-radius: 5px;
+        }
+        #submitButton {
+            padding: 10px 20px;
+            font-size: 16px;
+            background-color: #670804;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        #submitButton:hover {
+            background-color: #254E70;
+        }
+        #message {
+            margin-top: 20px;
+            font-size: 24px;
+            color: #254E70;
+            font-weight: bold;
+        }
+        .rating {
+            unicode-bidi: bidi-override;
+            direction: rtl;
+            text-align: center;
+            margin-top: 20px;
+        }
+        .rating > span {
+            display: inline-block;
+            position: relative;
+            width: 1.1em;
+            font-size: 30px;
+            color: #670804;
+            cursor: pointer;
+        }
+        .rating > span:hover:before,
+        .rating > span:hover ~ span:before {
+            content: "\2605";
+            position: absolute;
+            color: gold;
+        }
+    </style>
 </head>
 <body>
 
+    <div class="container">
+        <header>
+            <h1>⌦ .｡.:*♡Acerca De✧ ೃ༄*ੈ✩</h1>
+        </header>
+
+        <nav>
+            <a href="Inicio.html">Inicio</a>
+            <a href="Videos.html">Videos</a>
+            <a href="AcercaDe.html">Acerca de</a>
         </nav>
 
         <center><p>Hola, aquí te dejo algunas de mis redes sociales. ¡Sígueme o te echo a la patrulla!</p></center>
 
-        <p> disponible proximamente</p>
+        <ul class="social-links">
+            <li><a href="https://github.com/Ruzzk0" target="_blank"><i class="fab fa-github-alt" aria-hidden="true"></i></a></li>
+            <li><a href="https://www.instagram.com/_.ruzzky._?igsh=YjN6eGNtOGQ5eGwy" target="_blank"><i class="fab fa-instagram" aria-hidden="true"></i></a></li>
+        </ul>
+
+        <div class="form-container">
+            <input type="text" id="nameInput" placeholder="Tu nombre">
+            <button id="submitButton">Enviar</button>
+        </div>
+        <div id="message"></div>
+
+        <div class="rating">
+            <span>☆</span><span>☆</span><span>☆</span><span>☆</span><span>☆</span>
+        </div>
+        <p id="ratingMessage" style="text-align: center; color: #670804;"></p>
+    </div>
+
+    <div class="clock-container">
+        <div class="clock">
+            <div class="hand hour-hand"></div>
+            <div class="hand minute-hand"></div>
+            <div class="hand second-hand"></div>
+        </div>
+        <div class="digital-time"></div>
+    </div>
 
     <footer>
-        <p>&copy; 2025. Todos los derechos reservados. Tony Mellado</p>
+        <p>&copy; 2025 Moviles. Todos los derechos reservados. Tony Mellado</p>
     </footer>
+
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours();
+            const minutes = now.getMinutes();
+            const seconds = now.getSeconds();
+
+            const hourHand = document.querySelector('.hour-hand');
+            const minuteHand = document.querySelector('.minute-hand');
+            const secondHand = document.querySelector('.second-hand');
+            const digitalTime = document.querySelector('.digital-time');
+
+            const hourDegrees = (hours % 12 + minutes / 60) * 30;
+            const minuteDegrees = (minutes + seconds / 60) * 6;
+            const secondDegrees = seconds * 6;
+
+            hourHand.style.transform = `translateX(-50%) rotate(${hourDegrees}deg)`;
+            minuteHand.style.transform = `translateX(-50%) rotate(${minuteDegrees}deg)`;
+            secondHand.style.transform = `translateX(-50%) rotate(${secondDegrees}deg)`;
+
+            digitalTime.textContent = now.toLocaleTimeString();
+        }
+        setInterval(updateClock, 1000);
+        updateClock();
+
+        const frases = [
+            "La vida es como montar en bicicleta. Para mantener el equilibrio, debes seguir moviéndote.",
+            "El éxito es ir de fracaso en fracaso sin perder el entusiasmo.",
+            "La creatividad es la inteligencia divirtiéndose.",
+            "La mejor forma de predecir el futuro es crearlo.",
+            "No cuentes los días, haz que los días cuenten.",
+            "El único límite para nuestros logros de mañana serán nuestras dudas de hoy.",
+            "Haz siempre todo lo mejor que puedas. Lo que plantes ahora, cosecharás más tarde.",
+            "No puedes cambiar tu dirección en un instante, pero puedes ajustar tus velas para alcanzar tu destino.",
+            "El éxito no es la clave de la felicidad. La felicidad es la clave del éxito.",
+            "Lo que consigues al alcanzar tus metas no es tan importante como en quién te conviertes al lograrlas.",
+            "El único lugar donde el éxito viene antes que el trabajo es en el diccionario.",
+            "Sé tú el cambio que quieres ver en el mundo.",
+            "A veces, las pequeñas decisiones pueden cambiar tu vida para siempre.",
+            "El pasado no se puede cambiar, pero el futuro está en tus manos.",
+            "La gente exitosa no nace exitosa; trabajan para serlo.",
+            "No tengas miedo de fallar. Ten miedo de no intentarlo.",
+            "Cree en ti mismo y en todo lo que eres. Dentro de ti hay algo más grande que cualquier obstáculo.",
+            "La disciplina es el puente entre las metas y los logros.",
+            "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
+            "No esperes el momento perfecto. Toma el momento y hazlo perfecto.",
+            "El cambio comienza donde termina tu zona de confort.",
+            "Los sueños no funcionan a menos que tú trabajes por ellos.",
+            "El fracaso es solo la oportunidad de comenzar de nuevo, esta vez con más experiencia.",
+            "No importa lo lento que vayas, siempre estarás adelantando a quienes no lo intentan.",
+            "Tu actitud, no tu aptitud, determinará tu altitud.",
+            "No dejes que lo que no puedes hacer interfiera con lo que sí puedes hacer.",
+            "La clave para avanzar es comenzar.",
+            "El futuro pertenece a aquellos que creen en la belleza de sus sueños.",
+            "Nunca subestimes el poder de una pequeña acción.",
+            "El único fracaso real es dejar de intentarlo.",
+            "No soy vago, estoy en modo de ahorro de energía.",
+            "El trabajo en equipo es esencial... te permite echarle la culpa a alguien más.",
+            "Si el plan no funciona, cámbiale el nombre a 'prototipo'.",
+            "El dinero no compra la felicidad, pero paga el internet, que es casi lo mismo.",
+            "Al mal tiempo, buena cara… o al menos, buenos memes."
+];
+
+
+        document.getElementById('submitButton').addEventListener('click', function() {
+            const nombre = document.getElementById('nameInput').value;
+            if (nombre) {
+                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
+                document.getElementById('message').innerHTML = `Esto te lo dedico, ${nombre}:<br>"${fraseAleatoria}"`;
+            } else {
+                document.getElementById('message').innerHTML = "Por favor, ingresa tu nombre.";
+            }
+        });
+
+        const stars = document.querySelectorAll('.rating > span');
+        stars.forEach((star, index) => {
+            star.addEventListener('click', () => {
+                const rating = 5 - index;
+                document.getElementById('ratingMessage').textContent = `¡Gracias por calificar mi blog con ${rating} estrellas!`;
+                for (let i = 0; i < stars.length; i++) {
+                    if (i >= index) {
+                        stars[i].style.color = 'gold';
+                    } else {
+                        stars[i].style.color = '#670804';
+                    }
+                }
+            });
+        });
+    </script>
+
 </body>
 </html>
