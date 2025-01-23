@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acerca De</title>
+    <title>About</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
     <style>
         body {
@@ -184,16 +184,16 @@
 
     <div class="container">
         <header>
-            <h1>⌦ .｡.:*♡Acerca De✧ ೃ༄*ੈ✩</h1>
+            <h1>⌦ .｡.:*♡About✧ ೃ༄*ੈ✩</h1>
         </header>
 
         <nav>
-            <a href="Inicio.html">Inicio</a>
+            <a href="Home.html">Home</a>
             <a href="Videos.html">Videos</a>
-            <a href="AcercaDe.html">Acerca de</a>
+            <a href="About.html">About</a>
         </nav>
 
-        <center><p>Hola, aquí te dejo algunas de mis redes sociales. ¡Sígueme o te echo a la patrulla!</p></center>
+        <center><p>Hello, here are some of my social networks. Follow me, or I'll call the cops!</p></center>
 
         <ul class="social-links">
             <li><a href="https://github.com/Ruzzk0" target="_blank"><i class="fab fa-github-alt" aria-hidden="true"></i></a></li>
@@ -201,8 +201,8 @@
         </ul>
 
         <div class="form-container">
-            <input type="text" id="nameInput" placeholder="Tu nombre">
-            <button id="submitButton">Enviar</button>
+            <input type="text" id="nameInput" placeholder="Your name">
+            <button id="submitButton">Submit</button>
         </div>
         <div id="message"></div>
 
@@ -222,7 +222,7 @@
     </div>
 
     <footer>
-        <p>&copy; 2025 Moviles. Todos los derechos reservados. Tony Mellado</p>
+        <p>&copy; 2025 Moviles. All rights reserved. Tony Mellado</p>
     </footer>
 
     <script>
@@ -250,52 +250,51 @@
         setInterval(updateClock, 1000);
         updateClock();
 
-        const frases = [
-            "La vida es como montar en bicicleta. Para mantener el equilibrio, debes seguir moviéndote.",
-            "El éxito es ir de fracaso en fracaso sin perder el entusiasmo.",
-            "La creatividad es la inteligencia divirtiéndose.",
-            "La mejor forma de predecir el futuro es crearlo.",
-            "No cuentes los días, haz que los días cuenten.",
-            "El único límite para nuestros logros de mañana serán nuestras dudas de hoy.",
-            "Haz siempre todo lo mejor que puedas. Lo que plantes ahora, cosecharás más tarde.",
-            "No puedes cambiar tu dirección en un instante, pero puedes ajustar tus velas para alcanzar tu destino.",
-            "El éxito no es la clave de la felicidad. La felicidad es la clave del éxito.",
-            "Lo que consigues al alcanzar tus metas no es tan importante como en quién te conviertes al lograrlas.",
-            "El único lugar donde el éxito viene antes que el trabajo es en el diccionario.",
-            "Sé tú el cambio que quieres ver en el mundo.",
-            "A veces, las pequeñas decisiones pueden cambiar tu vida para siempre.",
-            "El pasado no se puede cambiar, pero el futuro está en tus manos.",
-            "La gente exitosa no nace exitosa; trabajan para serlo.",
-            "No tengas miedo de fallar. Ten miedo de no intentarlo.",
-            "Cree en ti mismo y en todo lo que eres. Dentro de ti hay algo más grande que cualquier obstáculo.",
-            "La disciplina es el puente entre las metas y los logros.",
-            "El éxito es la suma de pequeños esfuerzos repetidos día tras día.",
-            "No esperes el momento perfecto. Toma el momento y hazlo perfecto.",
-            "El cambio comienza donde termina tu zona de confort.",
-            "Los sueños no funcionan a menos que tú trabajes por ellos.",
-            "El fracaso es solo la oportunidad de comenzar de nuevo, esta vez con más experiencia.",
-            "No importa lo lento que vayas, siempre estarás adelantando a quienes no lo intentan.",
-            "Tu actitud, no tu aptitud, determinará tu altitud.",
-            "No dejes que lo que no puedes hacer interfiera con lo que sí puedes hacer.",
-            "La clave para avanzar es comenzar.",
-            "El futuro pertenece a aquellos que creen en la belleza de sus sueños.",
-            "Nunca subestimes el poder de una pequeña acción.",
-            "El único fracaso real es dejar de intentarlo.",
-            "No soy vago, estoy en modo de ahorro de energía.",
-            "El trabajo en equipo es esencial... te permite echarle la culpa a alguien más.",
-            "Si el plan no funciona, cámbiale el nombre a 'prototipo'.",
-            "El dinero no compra la felicidad, pero paga el internet, que es casi lo mismo.",
-            "Al mal tiempo, buena cara… o al menos, buenos memes."
-];
-
+        const quotes = [
+            "Life is like riding a bicycle. To keep your balance, you must keep moving.",
+            "Success is going from failure to failure without losing your enthusiasm.",
+            "Creativity is intelligence having fun.",
+            "The best way to predict the future is to create it.",
+            "Don’t count the days, make the days count.",
+            "The only limit to our achievements tomorrow is our doubts today.",
+            "Always do your best. What you plant now, you will harvest later.",
+            "You can’t change your direction in an instant, but you can adjust your sails to reach your destination.",
+            "Success is not the key to happiness. Happiness is the key to success.",
+            "What you achieve by reaching your goals is not as important as what you become by achieving them.",
+            "The only place where success comes before work is in the dictionary.",
+            "Be the change you want to see in the world.",
+            "Sometimes, small decisions can change your life forever.",
+            "The past cannot be changed, but the future is in your hands.",
+            "Successful people are not born successful; they work to be.",
+            "Don’t be afraid to fail. Be afraid of not trying.",
+            "Believe in yourself and all that you are. Within you is something greater than any obstacle.",
+            "Discipline is the bridge between goals and accomplishment.",
+            "Success is the sum of small efforts repeated day in and day out.",
+            "Don’t wait for the perfect moment. Take the moment and make it perfect.",
+            "Change begins where your comfort zone ends.",
+            "Dreams don’t work unless you do.",
+            "Failure is just the opportunity to begin again, this time more intelligently.",
+            "No matter how slow you go, you’re still lapping everyone on the couch.",
+            "Your attitude, not your aptitude, will determine your altitude.",
+            "Don’t let what you cannot do interfere with what you can do.",
+            "The key to getting ahead is getting started.",
+            "The future belongs to those who believe in the beauty of their dreams.",
+            "Never underestimate the power of a small action.",
+            "The only real failure is giving up.",
+            "I’m not lazy, I’m in energy-saving mode.",
+            "Teamwork is essential... it allows you to blame someone else.",
+            "If the plan doesn’t work, change the name to 'prototype.'",
+            "Money can’t buy happiness, but it can pay for the internet, which is almost the same thing.",
+            "In bad weather, keep a good face… or at least some good memes."
+        ];
 
         document.getElementById('submitButton').addEventListener('click', function() {
-            const nombre = document.getElementById('nameInput').value;
-            if (nombre) {
-                const fraseAleatoria = frases[Math.floor(Math.random() * frases.length)];
-                document.getElementById('message').innerHTML = `Esto te lo dedico, ${nombre}:<br>"${fraseAleatoria}"`;
+            const name = document.getElementById('nameInput').value;
+            if (name) {
+                const randomQuote = quotes[Math.floor(Math.random() * quotes.length)];
+                document.getElementById('message').innerHTML = `This is for you, ${name}:<br>"${randomQuote}"`;
             } else {
-                document.getElementById('message').innerHTML = "Por favor, ingresa tu nombre.";
+                document.getElementById('message').innerHTML = "Please, enter your name.";
             }
         });
 
@@ -303,7 +302,7 @@
         stars.forEach((star, index) => {
             star.addEventListener('click', () => {
                 const rating = 5 - index;
-                document.getElementById('ratingMessage').textContent = `¡Gracias por calificar mi blog con ${rating} estrellas!`;
+                document.getElementById('ratingMessage').textContent = `Thanks for rating my blog with ${rating} stars!`;
                 for (let i = 0; i < stars.length; i++) {
                     if (i >= index) {
                         stars[i].style.color = 'gold';
